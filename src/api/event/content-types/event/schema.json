@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "event_date": {
+      "type": "date",
+      "required": true
+    },
+    "registration_link": {
+      "type": "string"
+    },
+    "Location": {
+      "type": "string",
+      "required": true
+    },
+    "location_link": {
+      "type": "string"
+    }
+  }
+}

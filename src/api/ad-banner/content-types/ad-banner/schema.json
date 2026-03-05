@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ad_banners",
+  "info": {
+    "singularName": "ad-banner",
+    "pluralName": "ad-banners",
+    "displayName": "AdBanner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "link_url": {
+      "type": "string",
+      "required": true
+    },
+    "start_date": {
+      "type": "date",
+      "required": true
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "position": {
+      "type": "enumeration",
+      "required": true,
+      "default": "homepage_top",
+      "enum": [
+        "homepage_top",
+        "sidebar",
+        "homepage_middle"
+      ]
+    }
+  }
+}
