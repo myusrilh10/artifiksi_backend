@@ -20,6 +20,10 @@
       "targetField": "title",
       "required": true
     },
+    "author": {
+      "type": "string",
+      "required": true
+    },
     "excerpt": {
       "type": "string",
       "required": true
@@ -28,7 +32,7 @@
       "type": "blocks",
       "required": true
     },
-    "cover_media": {
+    "cover_image": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -44,6 +48,10 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "articles"
+    },
+    "views": {
+      "type": "biginteger",
+      "default": "0"
     }
   }
 }

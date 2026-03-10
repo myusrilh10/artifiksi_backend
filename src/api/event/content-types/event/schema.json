@@ -23,9 +23,12 @@
       "type": "text",
       "required": true
     },
-    "event_date": {
+    "start_date": {
       "type": "date",
       "required": true
+    },
+    "end_date": {
+      "type": "date"
     },
     "registration_link": {
       "type": "string"
@@ -36,6 +39,13 @@
     },
     "location_link": {
       "type": "string"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
