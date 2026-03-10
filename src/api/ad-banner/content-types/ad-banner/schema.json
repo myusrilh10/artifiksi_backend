@@ -36,12 +36,10 @@
     },
     "position": {
       "type": "enumeration",
-      "required": true,
-      "default": "homepage_top",
       "enum": [
-        "homepage_top",
-        "sidebar",
-        "homepage_middle"
+        "top",
+        "side",
+        "bottom"
       ]
     }
   }

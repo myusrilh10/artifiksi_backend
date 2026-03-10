@@ -490,11 +490,7 @@ export interface ApiAdBannerAdBanner extends Struct.CollectionTypeSchema {
       'api::ad-banner.ad-banner'
     > &
       Schema.Attribute.Private;
-    position: Schema.Attribute.Enumeration<
-      ['homepage_top', 'sidebar', 'homepage_middle']
-    > &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'homepage_top'>;
+    position: Schema.Attribute.Enumeration<['top', 'side', 'bottom']>;
     publishedAt: Schema.Attribute.DateTime;
     start_date: Schema.Attribute.Date & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
