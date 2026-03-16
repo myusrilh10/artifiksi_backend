@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "ad_banners",
+  "collectionName": "advertisements",
   "info": {
-    "singularName": "ad-banner",
-    "pluralName": "ad-banners",
-    "displayName": "AdBanner"
+    "singularName": "advertisement",
+    "pluralName": "advertisements",
+    "displayName": "advertisement"
   },
   "options": {
     "draftAndPublish": true
@@ -18,29 +18,21 @@
     "image": {
       "type": "media",
       "multiple": false,
-      "required": true,
       "allowedTypes": [
-        "images"
+        "images",
+        "videos"
       ]
-    },
-    "link_url": {
-      "type": "string",
-      "required": true
-    },
-    "start_date": {
-      "type": "date",
-      "required": true
-    },
-    "end_date": {
-      "type": "date"
     },
     "position": {
       "type": "enumeration",
       "enum": [
         "top",
-        "side",
+        "middle",
         "bottom"
       ]
+    },
+    "link_url": {
+      "type": "string"
     }
   }
 }

@@ -467,12 +467,13 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiAdBannerAdBanner extends Struct.CollectionTypeSchema {
-  collectionName: 'ad_banners';
+export interface ApiAdvertisementAdvertisement
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'advertisements';
   info: {
-    displayName: 'AdBanner';
-    pluralName: 'ad-banners';
-    singularName: 'ad-banner';
+    displayName: 'advertisement';
+    pluralName: 'advertisements';
+    singularName: 'advertisement';
   };
   options: {
     draftAndPublish: true;
@@ -481,18 +482,16 @@ export interface ApiAdBannerAdBanner extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    end_date: Schema.Attribute.Date;
-    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    link_url: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'videos'>;
+    link_url: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::ad-banner.ad-banner'
+      'api::advertisement.advertisement'
     > &
       Schema.Attribute.Private;
-    position: Schema.Attribute.Enumeration<['top', 'side', 'bottom']>;
+    position: Schema.Attribute.Enumeration<['top', 'middle', 'bottom']>;
     publishedAt: Schema.Attribute.DateTime;
-    start_date: Schema.Attribute.Date & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1140,7 +1139,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::ad-banner.ad-banner': ApiAdBannerAdBanner;
+      'api::advertisement.advertisement': ApiAdvertisementAdvertisement;
       'api::article.article': ApiArticleArticle;
       'api::category.category': ApiCategoryCategory;
       'api::event.event': ApiEventEvent;
