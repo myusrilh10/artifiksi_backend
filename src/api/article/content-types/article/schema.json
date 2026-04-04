@@ -52,6 +52,14 @@
     "views": {
       "type": "biginteger",
       "default": "0"
+    },
+    "image_caption": {
+      "type": "string",
+      "required": false
+    },
+    "publish_date": {
+      "type": "date",
+      "required": true
     }
   }
 }
